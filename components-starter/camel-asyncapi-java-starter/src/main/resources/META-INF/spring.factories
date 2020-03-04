@@ -15,13 +15,5 @@
 ## limitations under the License.
 ## ---------------------------------------------------------------------------
 
-#You can use this property to override the default autowired broker-url
-
-camel.springboot.main-run-controller = true
-AMQP_REMOTE_URI=amqp://localhost:5672
-AMQP_HOST=localhost
-AMQP_SERVICE_PORT=5672
-AMQP_SERVICE_USERNAME=admin
-AMQP_SERVICE_PASSWORD=admin
-
-server.port=8090
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.apache.camel.asyncapi.springboot.AsyncApiComponentAutoConfiguration

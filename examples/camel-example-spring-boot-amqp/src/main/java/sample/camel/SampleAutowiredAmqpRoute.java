@@ -38,6 +38,15 @@ public class SampleAutowiredAmqpRoute extends RouteBuilder {
         from("file:src/main/data?noop=true")
             .to("amqp:queue:SCIENCEQUEUE");
 
+//        from("direct:start")
+//                .to("undertow:http://www.google.com");
+
+        //todo is created by route builder somehow
+        from("async-api:///api-doc")
+            .to("async-api:///api-doc");
+//            .to("log:foo");
+
+
         /*from("timer:bar")
             .setBody(constant("Hello from Camel"))
             .to("amqp:queue:SCIENCEQUEUE");*/
