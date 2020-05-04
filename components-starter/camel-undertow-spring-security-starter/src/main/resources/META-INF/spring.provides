@@ -14,10 +14,4 @@
 ## See the License for the specific language governing permissions and
 ## limitations under the License.
 ## ---------------------------------------------------------------------------
-
-# Default port of spring-boot has to be changed, to avoid clash with keycloak server
-# which is started on port 8080 (with docker-compose example)
-server.port=8081
-
-#logging.level.root=DEBUG
-camel.component.undertow.spring.security.realmId=test
+provides: camel-undertow-spring-security
